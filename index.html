@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for FedEx Jobs</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0047bb, #ff6600);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px 30px;
+            position: relative;
+        }
+
+        .menu-toggle {
+            font-size: 26px;
+            cursor: pointer;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.2);
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #0047bb;
+            font-size: 1rem;
+            display: block;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #ff6600;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Image above the title */
+        .hero-image {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .sub-heading {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"], 
+        input[type="email"] {
+            width: 70%;
+            max-width: 400px;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            outline: none;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .submit-btn {
+            background: linear-gradient(90deg, #ff6600, #0047bb);
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .countdown {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .popup-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            input[type="text"], input[type="email"] {
+                width: 90%;
+            }
+
+            .submit-btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="https://go4affm.com/c/?p=40201&o=19999&subid=1234">Home</a>
+            <a href="https://go4affm.com/c/?p=40201&o=19999&subid=1234">About</a>
+            <a href="https://go4affm.com/c/?p=40201&o=19999&subid=1234">Support</a>
+        </div>
+    </header>
+    <div class="hero-section">
+        <img src="https://i.ibb.co.com/5sHr3p2/46e2c14a7b42.gif" alt="FedEx Logo" class="hero-image">
+        <h1 class="hero-title">Find Your Dream Job with FedEx!</h1>
+        <p class="sub-heading">Sign up to explore opportunities and get started now.</p>
+    </div>
+    <div class="form-container">
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="email" id="email" placeholder="Enter Your Email">
+        <button class="submit-btn" onclick="submitForm()">Submit & Start Applying!</button>
+    </div>
+    <div class="countdown">
+        Limited time offer! Register within <span id="timer">00:10:00</span> to secure your spot.
+    </div>
+    <div class="popup-notification" id="popup">
+        10,000+ applicants have already signed up!
+    </div>
+    <script>
+        // Toggle Menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Submit Form
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                window.location.href = 'https://go4affm.com/c/?p=40201&o=19999&subid=1234';
+            } else {
+                alert('Please enter a valid email!');
+            }
+        }
+
+        // Countdown Timer
+        const timerElement = document.getElementById('timer');
+        let countdown = 600;
+        setInterval(() => {
+            if (countdown <= 0) return;
+            countdown--;
+            const minutes = String(Math.floor(countdown / 60)).padStart(2, '0');
+            const seconds = String(countdown % 60).padStart(2, '0');
+            timerElement.textContent = `00:${minutes}:${seconds}`;
+        }, 1000);
+
+        // Popup Notification
+        setTimeout(() => {
+            document.getElementById('popup').style.display = 'block';
+        }, 5000);
+    </script>
+</body>
+</html>
